@@ -1,7 +1,6 @@
 name: hosted_ad_banner
 description: A Flutter package that implements ad banner widget for self hosted ads
 version: 0.1.0
-publish_to: none
 homepage: https://github/erickzanardo/hosted_ad_banner
 
 environment:
