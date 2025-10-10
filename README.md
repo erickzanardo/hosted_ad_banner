@@ -7,6 +7,22 @@
 
 A Flutter package that implements ad banner widget for self hosted ads
 
+## Our top sponsors
+
+Check out these amazing sponsors that support my work!
+
+<table style="background-color: white; border: 1px solid black">
+    <tbody>
+        <tr>
+            <td align="center" style="border: 1px solid black">
+                <a href="https://invertase.io/"><img src="https://github.com/erickzanardo/erickzanardo/raw/main/images/sponsors/invertase.jpeg" width="225"/> <br /> Invertase </a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+[Become a featured sponsor!](https://cherrybit.studio/featured-sponsors/)
+
 ## Installation 💻
 
 **❗ In order to start using Hosted Ad Banner you must have the [Flutter SDK][flutter_install_link] installed on your machine.**
@@ -35,7 +51,26 @@ or products.
 
 ## How to use
 
-TODO
+```dart
+HostedAdBanner(
+  hostedAdds: const [
+    HostedAdd(
+      targetUrl: 'http://g4me.info/mine',
+      imageUrls: [
+        'https://cherrybitstudio.wordpress.com/wp-content/uploads/2025/10/mco-2.png',
+      ],
+    ),
+    HostedAdd(
+      targetUrl: 'http://g4me.info/doug',
+      imageUrls: [
+        'https://cherrybitstudio.wordpress.com/wp-content/uploads/2025/10/gd-1.png',
+      ],
+    ),
+  ],
+  width: MediaQuery.sizeOf(context).width,
+  height: 100,
+),
+```
 
 ---
 
