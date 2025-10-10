@@ -35,7 +35,26 @@ or products.
 
 ## How to use
 
-TODO
+```dart
+HostedAdBanner(
+  hostedAdds: const [
+    HostedAdd(
+      targetUrl: 'http://g4me.info/mine',
+      imageUrls: [
+        'https://cherrybitstudio.wordpress.com/wp-content/uploads/2025/10/mco-2.png',
+      ],
+    ),
+    HostedAdd(
+      targetUrl: 'http://g4me.info/doug',
+      imageUrls: [
+        'https://cherrybitstudio.wordpress.com/wp-content/uploads/2025/10/gd-1.png',
+      ],
+    ),
+  ],
+  width: MediaQuery.sizeOf(context).width,
+  height: 100,
+),
+```
 
 ---
 
