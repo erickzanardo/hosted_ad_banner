@@ -15,18 +15,20 @@ class MyApp extends StatelessWidget {
         body: Column(
           children: [
             const Expanded(
-              child: Center(child: Text('Image a super duper cool app here!'),),
+              child: Center(
+                child: Text('Imagine a super duper cool app here!'),
+              ),
             ),
             HostedAdBanner(
               hostedAdds: const [
                 HostedAdd(
-                  targetUrl: 'http://g4me.info/mine',
+                  targetUrl: 'https://g4me.info/mine',
                   imageUrls: [
                     'https://cherrybitstudio.wordpress.com/wp-content/uploads/2025/10/mco-2.png',
                   ],
                 ),
                 HostedAdd(
-                  targetUrl: 'http://g4me.info/doug',
+                  targetUrl: 'https://g4me.info/doug',
                   imageUrls: [
                     'https://cherrybitstudio.wordpress.com/wp-content/uploads/2025/10/gd-1.png',
                   ],

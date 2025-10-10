@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:animate_do/animate_do.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/widgets.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 /// {@template hosted_add}
 /// A model class for self hosted ad
@@ -103,6 +104,7 @@ class _HostedAdBannerState extends State<HostedAdBanner> {
       child: GestureDetector(
         onTap: () {
           final url = widget.hostedAdds[_currentAdIndex].targetUrl;
+          unawaited(launchUrlString(url));
           // Handle URL redirection logic here
         },
         child: CachedNetworkImage(
