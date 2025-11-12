@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:animate_do/animate_do.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
@@ -15,6 +16,7 @@ class HostedAdd {
     required this.imageUrls,
     this.stepDuration = const Duration(seconds: 30),
     this.loopCount = 0,
+    this.backgroundColor,
   });
 
   /// The URL to which the ad banner should redirect when clicked.
@@ -29,6 +31,9 @@ class HostedAdd {
 
   /// The number of times the ad banner should loop through the images.
   final int loopCount;
+
+  /// The background color of the ad banner.
+  final Color? backgroundColor;
 }
 
 /// {@template hosted_ad_banner}
@@ -101,17 +106,23 @@ class _HostedAdBannerState extends State<HostedAdBanner> {
     return SizedBox(
       width: widget.width,
       height: widget.height,
-      child: GestureDetector(
-        onTap: () {
-          final url = widget.hostedAdds[_currentAdIndex].targetUrl;
-          unawaited(launchUrlString(url));
-          // Handle URL redirection logic here
-        },
-        child: CachedNetworkImage(
-          imageUrl:
-              widget.hostedAdds[_currentAdIndex].imageUrls[_currentImageIndex],
-          fit: BoxFit.cover,
-        ).fadeIn(),
+      child: ColoredBox(
+        color:
+            widget.hostedAdds[_currentAdIndex].backgroundColor ??
+            Colors.transparent,
+        child: GestureDetector(
+          onTap: () {
+            final url = widget.hostedAdds[_currentAdIndex].targetUrl;
+            unawaited(launchUrlString(url));
+            // Handle URL redirection logic here
+          },
+          child: CachedNetworkImage(
+            imageUrl: widget
+                .hostedAdds[_currentAdIndex]
+                .imageUrls[_currentImageIndex],
+            fit: BoxFit.fitHeight,
+          ).fadeIn(),
+        ),
       ),
     );
   }

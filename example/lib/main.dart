@@ -22,16 +22,25 @@ class MyApp extends StatelessWidget {
             HostedAdBanner(
               hostedAdds: const [
                 HostedAdd(
+                  targetUrl: 'https://julius-cherry-bit.web.app/',
+                  imageUrls: [
+                    'https://cherrybitstudio.wordpress.com/wp-content/uploads/2025/11/julius-1.png',
+                  ],
+                  backgroundColor: Color(0xffaadeac),
+                ),
+                HostedAdd(
                   targetUrl: 'https://g4me.info/mine',
                   imageUrls: [
                     'https://cherrybitstudio.wordpress.com/wp-content/uploads/2025/10/mco-2.png',
                   ],
+                  backgroundColor: Colors.black,
                 ),
                 HostedAdd(
                   targetUrl: 'https://g4me.info/doug',
                   imageUrls: [
                     'https://cherrybitstudio.wordpress.com/wp-content/uploads/2025/10/gd-1.png',
                   ],
+                  backgroundColor: Colors.black,
                 ),
               ],
               width: MediaQuery.sizeOf(context).width,
